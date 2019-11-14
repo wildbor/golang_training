@@ -40,6 +40,7 @@ func SearchUserController(c echo.Context) error {
 	return c.JSON(http.StatusNotFound, "Tidak Ada")
 }
 
+//halo ma nem jeff
 func CreateUsersController(c echo.Context) error {
 	user := user{}
 	c.Bind(&user)
@@ -68,10 +69,10 @@ func deleteUserController(c echo.Context) error {
 	Index, _ := strconv.Atoi(c.Param("id"))
 	for _, value := range users {
 		if value.Id == Index {
-			NewUser = remove 
+			NewUser = remove
 			return c.JSON(http.StatusOK, map[string]interface{}{
 				"messages": "user deleted!!",
-				"user":
+				"user":     NewUsr,
 			})
 
 		}
